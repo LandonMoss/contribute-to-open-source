@@ -134,4 +134,8 @@ describe('divide', () => {
   it('should divide one positive number and one negative number', () => {
     expect(calculator.divide(84, -2)).to.equal(-42);
   });
+
+  it('should throw an error when dividing by zero', () => {
+    expect(() => calculator.divide(42, 0)).to.throw(Error, "Division by zero is not allowed");
+  });
 });
